@@ -10,7 +10,7 @@ The container contains the following:
 * `PHP-FPM`
 
 ## Images
-* `latest`, `0.1`, `0.1.0` ([Dockerfile](./Dockerfile))
+* `latest`, `0.1`, `0.1.1` ([Dockerfile](./Dockerfile))
 
 ## Usage
 Pull the docker image from Docker hub as:
