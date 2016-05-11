@@ -47,6 +47,11 @@ RUN apk update &&\
   php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php &&\
   php composer-setup.php --install-dir=/bin --filename=composer &&\
   php -r "unlink('composer-setup.php');" &&\
+  # use sockets as they are memory efficient
+  sed -i "s/^listen.*/listen = \/var\/run\/php5\-fpm.sock/" /etc/php/php-fpm.conf &&\
+  # allow container environment variables into PHP-FPM
+  sed -i "s/^;clear_env.*/clear_env = no/" /etc/php/php-fpm.conf &&\
+  # don't override
   rm -rf /var/cache/apk/*
 
 ENTRYPOINT ["/usr/bin/php"]
