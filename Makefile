@@ -8,4 +8,4 @@ latest: Dockerfile
 run:
 	@docker run --rm \
 		--name test-php \
-		activatedgeek/php:devel
+		activatedgeek/php:devel php -i

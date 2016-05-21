@@ -53,6 +53,3 @@ RUN apk update &&\
   sed -i "s/^;clear_env.*/clear_env = no/" /etc/php/php-fpm.conf &&\
   # don't override
   rm -rf /var/cache/apk/*
-
-ENTRYPOINT ["/usr/bin/php"]
-CMD ["-i"]
