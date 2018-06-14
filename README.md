@@ -3,7 +3,7 @@
 | [![Build Status](https://travis-ci.org/crazybydefault/docker-php.svg?branch=master)](https://travis-ci.org/crazybydefault/docker-php) | [![](https://imagelayers.io/badge/crazybydefault/php:latest.svg)](https://imagelayers.io/?images=crazybydefault/php:latest 'Get your own badge on imagelayers.io') |
 |:-:|:-:|
 
-An Alpine-based PHP image loaded with modules.
+An Alpine-based PHP image loaded with modules and composer.
 
 The container contains the following:
 * `PHP` (5.5+)
