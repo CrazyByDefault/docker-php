@@ -1,48 +1,48 @@
 FROM alpine:latest
 
-MAINTAINER Sanyam Kapoor "sasi8998vv@gmail.com"
+MAINTAINER Shashank Varanasi "sasi8998vv@gmail.com"
 
 RUN apk update &&\
   apk add --update \
     curl \
     openrc \
-    php-bcmath \
-    php-bz2 \
-    php-cli \
-    php-curl \
-    php-ctype \
-    php-dba \
-    php-dom \
-    php-exif \
-    php-fpm \
-    php-ftp \
-    php-gd \
-    php-gettext \
-    php-iconv \
-    php-json \
-    php-mcrypt \
-    php-mysql \
-    php-mysqli \
-    php-opcache \
-    php-openssl \
-    php-pdo \
-    php-pdo_mysql \
-    php-pdo_sqlite \
-    php-phar \
-    php-posix \
-    php-shmop \
-    php-soap \
-    php-sockets \
-    php-sqlite3 \
-    php-sysvmsg \
-    php-sysvsem \
-    php-sysvshm \
-    php-wddx \
-    php-xcache \
-    php-xml \
-    php-xmlreader \
-    php-zip \
-    php-zlib \
+    php5-bcmath \
+    php5-bz2 \
+    php5-cli \
+    php5-curl \
+    php5-ctype \
+    php5-dba \
+    php5-dom \
+    php5-exif \
+    php5-fpm \
+    php5-ftp \
+    php5-gd \
+    php5-gettext \
+    php5-iconv \
+    php5-json \
+    php5-mcrypt \
+    php5-mysql \
+    php5-mysqli \
+    php5-opcache \
+    php5-openssl \
+    php5-pdo \
+    php5-pdo_mysql \
+    php5-pdo_sqlite \
+    php5-phar \
+    php5-posix \
+    php5-shmop \
+    php5-soap \
+    php5-sockets \
+    php5-sqlite3 \
+    php5-sysvmsg \
+    php5-sysvsem \
+    php5-sysvshm \
+    php5-wddx \
+    php5-xcache \
+    php5-xml \
+    php5-xmlreader \
+    php5-zip \
+    php5-zlib \
     musl &&\
   php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php &&\
   php composer-setup.php --install-dir=/bin --filename=composer &&\
