@@ -1,6 +1,6 @@
 # docker-php
 
-| [![Build Status](https://travis-ci.org/activatedgeek/docker-php.svg?branch=master)](https://travis-ci.org/activatedgeek/docker-php) | [![](https://imagelayers.io/badge/activatedgeek/php:latest.svg)](https://imagelayers.io/?images=activatedgeek/php:latest 'Get your own badge on imagelayers.io') |
+| [![Build Status](https://travis-ci.org/crazybydefault/docker-php.svg?branch=master)](https://travis-ci.org/crazybydefault/docker-php) | [![](https://imagelayers.io/badge/crazybydefault/php:latest.svg)](https://imagelayers.io/?images=crazybydefault/php:latest 'Get your own badge on imagelayers.io') |
 |:-:|:-:|
 
 An Alpine-based PHP image loaded with modules.
@@ -15,13 +15,13 @@ The container contains the following:
 ## Usage
 Pull the docker image from Docker hub as:
 ```
-$ docker pull activatedgeek/php
+$ docker pull crazybydefault/php
 ```
 By default, this will pull the latest image.
 
 A basic run command looks like:
 ```
-$ docker run --rm activatedgeek/php:latest
+$ docker run --rm crazybydefault/php:latest
 ```
 
 But by itself, this image is not really helpful and should be used as a base to

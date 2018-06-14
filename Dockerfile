@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-MAINTAINER Sanyam Kapoor "1sanyamkapoor@gmail.com"
+MAINTAINER Sanyam Kapoor "sasi8998vv@gmail.com"
 
 RUN apk update &&\
   apk add --update \

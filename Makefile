@@ -3,9 +3,9 @@
 ##
 
 latest: Dockerfile
-	@docker build -t activatedgeek/php:devel .
+	@docker build -t crazybydefault/php:devel .
 
 run:
 	@docker run --rm \
 		--name test-php \
-		activatedgeek/php:devel php -i
+		crazybydefault/php:devel php -i
