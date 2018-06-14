@@ -2,10 +2,14 @@ FROM alpine:3.4
 
 MAINTAINER Shashank Varanasi "sasi8998vv@gmail.com"
 
+RUN echo http://mirror.yandex.ru/mirrors/alpine/v3.5/main > /etc/apk/repositories; \
+    echo http://mirror.yandex.ru/mirrors/alpine/v3.5/community >> /etc/apk/repositories
+
 RUN apk update &&\
   apk add --update \
     curl \
     openrc \
+    php5 \
     php5-bcmath \
     php5-bz2 \
     php5-cli \
@@ -48,8 +52,8 @@ RUN apk update &&\
   php composer-setup.php --install-dir=/bin --filename=composer &&\
   php -r "unlink('composer-setup.php');" &&\
   # use sockets as they are memory efficient
-  sed -i "s/^listen.*/listen = \/var\/run\/php5\-fpm.sock/" /etc/php/php-fpm.conf &&\
+  sed -i "s/^listen.*/listen = \/var\/run\/php5\-fpm.sock/" /etc/php5/php-fpm.conf &&\
   # allow container environment variables into PHP-FPM
-  sed -i "s/^;clear_env.*/clear_env = no/" /etc/php/php-fpm.conf &&\
+  sed -i "s/^;clear_env.*/clear_env = no/" /etc/php5/php-fpm.conf &&\
   # don't override
   rm -rf /var/cache/apk/*
