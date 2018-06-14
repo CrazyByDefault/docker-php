@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.4
 
 MAINTAINER Shashank Varanasi "sasi8998vv@gmail.com"
 
